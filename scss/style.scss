@@ -364,4 +364,10 @@ form {
     transition: all 250ms;
 }
 
+@media screen and (max-width: 600px) {
+    .container{
+        display: block;
+    }
+}
+
 
