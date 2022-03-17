@@ -1,217 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/all.css">
-    <link rel="icon" type="image/png" href="img/logo.png"/>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="icon" type="image/png" href="img/logo.png" />
 
     <title>HFU Dashboard</title>
-</head>
-<body onload="startTime();">
+  </head>
+  <body onload="startTime();">
     <div class="container">
-        <div class="profilbild">
-            <img src="img/philipp.png" alt="profilbild">
-            <div>
-                <h3>Philipp Jenny</h3>
-                <h4>6. Semester</h4>
-            </div>
+      <div class="profilbild">
+        <img src="img/philipp.png" alt="profilbild" />
+        <div>
+          <h3>Philipp Jenny</h3>
+          <h4>7. Semester</h4>
+        </div>
+      </div>
+
+      <div class="platzhalter"></div>
+
+      <div class="datumUhrzeit">
+        <div class="time" id="txt"></div>
+        <h4 class="day"></h4>
+      </div>
+
+      <div class="reihe1 reihe">
+        <p class="blockTitel">Fächer</p>
+        <div class="fach">
+          UX Research
+          <span
+            class="gg-laptop iconAlign"
+            onclick="window.location.href='https://rooms.hs-furtwangen.de/rooms/dm03';"
+          ></span>
+          <span
+            class="gg-folder iconAlign"
+            onclick="window.location.href='https://www.dm.hs-furtwangen.de/dm.php?template=projects_welcome&projectid=1492';"
+          ></span>
+        </div>
+        <div class="fach">
+          Web Analytics
+          <span
+            class="gg-laptop iconAlign"
+            onclick="window.location.href='https://rooms.hs-furtwangen.de/rooms/dm03';"
+          ></span>
+          <span
+            class="gg-folder iconAlign"
+            onclick="window.location.href='https://www.dm.hs-furtwangen.de/dm.php?template=projects_welcome&projectid=1492';"
+          ></span>
+        </div>
+        <div class="fach">
+          Mobile App Development
+          <span
+            class="gg-laptop iconAlign"
+            onclick="window.location.href='https://rooms.hs-furtwangen.de/rooms/dm14';"
+          ></span>
+          <span
+            class="gg-folder iconAlign"
+            onclick="window.location.href='https://felix.hs-furtwangen.de/auth/RepositoryEntry/4072408000/CourseNode/92654919339985';"
+          ></span>
+        </div>
+        <div class="fach">
+          PRIMA
+          <span
+            class="gg-laptop iconAlign"
+            onclick="window.location.href='https://rooms.hs-furtwangen.de/rooms/dm15';"
+          ></span>
+          <span
+            class="gg-folder iconAlign"
+            onclick="window.location.href='https://webuser.hs-furtwangen.de/~del/Prima/index.php';"
+          ></span>
+        </div>
+        <div class="fach">
+          Englisch
+          <span
+            class="gg-laptop iconAlign"
+            onclick="window.location.href='https://rooms.hs-furtwangen.de/rooms/lc11';"
+          ></span>
+          <span
+            class="gg-folder iconAlign"
+            onclick="window.location.href='https://www.dm.hs-furtwangen.de/dm.php?template=projects_dateien&projectid=2009';"
+          ></span>
+        </div>
+        <div class="fach">
+          Typografie
+          <span
+            class="gg-folder iconAlign"
+            onclick="window.location.href='https://felix.hs-furtwangen.de/auth/RepositoryEntry/3952705556/CourseNode/101518640475593';"
+          ></span>
+        </div>
+        <div class="fach">
+          EIA 1
+          <span
+            class="gg-folder iconAlign"
+            onclick="window.location.href='https://felix.hs-furtwangen.de/auth/RepositoryEntry/4072407414/CourseNode/103340169462132';"
+          ></span>
+        </div>
+      </div>
+
+      <div class="reihe2">
+        <div class="reihe">
+          <p class="blockTitel">ToDo Liste</p>
+          <form>
+            <input type="text" class="todoInput" />
+            <button class="todoButton" type="submit"><span class="gg-math-plus"></span></button>
+          </form>
+
+          <div class="todoContainer">
+            <ul class="todoList"></ul>
+          </div>
         </div>
 
-        <div class="platzhalter">
+        <div class="off">
+          <p class="blockTitel">Häufig verwendete Apps</p>
+          <img class="icons" height="20px" src="img/gdrive.png" alt="" />
+          <img class="icons" height="20px" src="img/gdocs.png" alt="" />
+          <img class="icons" height="20px" src="img/gsheets.png" alt="" />
+          <img class="icons" height="20px" src="img/vscode.png" alt="" />
+          <img class="icons" height="20px" src="img/alfaview.png" alt="" />
+          <img class="icons" height="20px" src="img/xd.png" alt="" />
+        </div>
+      </div>
 
+      <div class="reihe3">
+        <div class="reihe off">
+          <form action="">
+            <input type="text" placeholder="Termin" class="termin" />
+            <input type="text" placeholder="Von" class="terminZeit" />
+            <input type="text" placeholder="Bis" class="terminZeit" />
+            <select name="cars" id="cars">
+              <option value="volvo">Bitte wähen...</option>
+              <option value="volvo">IMZ</option>
+              <option value="volvo">DM-01</option>
+              <option value="saab">DM-02</option>
+              <option value="mercedes">DM-03</option>
+              <option value="audi">DM-04</option>
+              <option value="volvo">DM-05</option>
+              <option value="saab">DM-06</option>
+              <option value="mercedes">DM-07</option>
+              <option value="audi">DM-08</option>
+              <option value="volvo">DM-09</option>
+              <option value="saab">DM-10</option>
+              <option value="mercedes">DM-11</option>
+              <option value="audi">DM-12</option>
+              <option value="volvo">DM-13</option>
+              <option value="saab">DM-14</option>
+              <option value="mercedes">DM-15</option>
+              <option value="audi">DM-16</option>
+              <option value="audi">DM-17</option>
+              <option value="volvo">DM-18</option>
+              <option value="saab">DM-19</option>
+              <option value="mercedes">DM-20</option>
+              <option value="audi">DM-21</option>
+            </select>
+
+            <button class="todoButton" type="submit"><span class="gg-math-plus"></span></button>
+          </form>
+
+          <div class="menu-slider-container">
+            <button class="aktiv menu-slider-icon">
+              <img class="aktiv" src="img/dte/moActive.svg" />
+              <img class="normal" src="img/dte/mo.svg" />
+            </button>
+            <button class="menu-slider-icon">
+              <img class="aktiv" src="img/dte/diActive.svg" />
+              <img class="normal" src="img/dte/di.svg" />
+            </button>
+            <button class="menu-slider-icon">
+              <img class="aktiv" src="img/dte/miActive.svg" />
+              <img class="normal" src="img/dte/mi.svg" />
+            </button>
+            <button class="menu-slider-icon">
+              <img class="aktiv" src="img/dte/doActive.svg" />
+              <img class="normal" src="img/dte/do.svg" />
+            </button>
+            <button class="menu-slider-icon">
+              <img class="aktiv" src="img/dte/frActive.svg" />
+              <img class="normal" src="img/dte/fr.svg" />
+            </button>
+            <button class="menu-slider-icon">
+              <img class="aktiv" src="img/dte/saActive.svg" />
+              <img class="normal" src="img/dte/sa.svg" />
+            </button>
+            <button class="menu-slider-icon" id="sonntag">
+              <img class="aktiv" src="img/dte/soActive.svg" />
+              <img class="normal" src="img/dte/so.svg" />
+            </button>
+            <div id="slider" class="menu-slider-bg"></div>
+          </div>
         </div>
 
-        <div class="datumUhrzeit">
-            <div class="time" id="txt"></div>
-            <h4 class="day">12. März 2020</h4>
-        </div>
-            
-        <div class="reihe1 reihe">
-            <p class="blockTitel">Fächer</p>
-            <div class="fach"> Projektmanagement <span class="gg-laptop iconAlign" onclick="window.location.href='https://rooms.hs-furtwangen.de/rooms/dm05';"></span> <span class="gg-folder iconAlign" onclick="window.location.href='https://www.dm.hs-furtwangen.de/dm.php?template=projects_dateien&projectid=1448';"></span> </div>
-            <div class="fach"> PRIMA <span class="gg-laptop iconAlign" onclick="window.location.href='https://rooms.hs-furtwangen.de/rooms/dm15';"></span> <span class="gg-folder iconAlign" onclick="window.location.href='https://www.dm.hs-furtwangen.de/dm.php?template=projects_dateien&projectid=1448';"></span> </div>
-            <div class="fach"> Online Marketing <span class="gg-laptop iconAlign" onclick="window.location.href='https://rooms.hs-furtwangen.de/rooms/dm04';"></span> <span class="gg-folder iconAlign" onclick="window.location.href='https://felix.hs-furtwangen.de/auth/RepositoryEntry/4023025821';"></span> </div>
-            <div class="fach"> Online Produkt Management <span class="gg-laptop iconAlign" onclick="window.location.href='https://rooms.hs-furtwangen.de/rooms/dm21';"></span> <span class="gg-folder iconAlign" onclick="window.location.href='https://felix.hs-furtwangen.de/auth/RepositoryEntry/3967352914';" ></span> </div>
-            <div class="fach"> Englisch <span class="gg-laptop iconAlign" onclick="window.location.href='https://rooms.hs-furtwangen.de/rooms/lc11';"></span> <span class="gg-folder iconAlign" onclick="window.location.href='https://www.dm.hs-furtwangen.de/dm.php?template=projects_dateien&projectid=2009';"></span> </div>
-            <div class="fach"> Hypes, Hass, Hetze <span class="gg-laptop iconAlign" onclick="window.location.href='https://rooms.hs-furtwangen.de/rooms/dm02';"></span> <span class="gg-folder iconAlign" onclick="window.location.href='https://felix.hs-furtwangen.de/auth/RepositoryEntry/4020863220';"></span> </div>
-            <div class="fach"> EIA 1 <span class="gg-laptop iconAlign" onclick="window.location.href='https://rooms.hs-furtwangen.de/rooms/dm15';"></span> <span class="gg-folder iconAlign" onclick="window.location.href='https://felix.hs-furtwangen.de/auth/RepositoryEntry/4020863220';"></span> </div>
-        </div>
-          
-        <div class="reihe2">
-            <div class="reihe">
-                <p class="blockTitel">ToDo Liste</p>
-                <form>
-                    <input type="text" class="todoInput">
-                    <button class="todoButton" type="submit"> <span class="gg-math-plus"></span></button>
-                </form>
-
-                <div class="todoContainer">
-                    <ul class="todoList">
-                        
-                    </ul>
-                </div>
-            </div>
-
-
-            <div class="off">
-                <p class="blockTitel">Häufig verwendete Apps</p>
-                <img class="icons" height="20px" src="img/gdrive.png" alt="">
-                <img class="icons" height="20px" src="img/gdocs.png" alt="">
-                <img class="icons" height="20px" src="img/gsheets.png" alt="">
-                <img class="icons" height="20px" src="img/vscode.png" alt="">
-                <img class="icons" height="20px" src="img/alfaview.png" alt="">
-                <img class="icons" height="20px" src="img/xd.png" alt="">
-            </div>
-        </div>
-            
-        <div class="reihe3">
-        
-
-            <div class="reihe off">
-
-                <form action="">
-                    <input type="text" placeholder="Termin" class="termin">
-                    <input type="text" placeholder="Von" class="terminZeit">
-                    <input type="text" placeholder="Bis" class="terminZeit">
-                    <select name="cars" id="cars">
-                        <option value="volvo">Bitte wähen...</option>
-                        <option value="volvo">IMZ</option>
-                        <option value="volvo">DM-01</option>
-                        <option value="saab">DM-02</option>
-                        <option value="mercedes">DM-03</option>
-                        <option value="audi">DM-04</option>
-                        <option value="volvo">DM-05</option>
-                        <option value="saab">DM-06</option>
-                        <option value="mercedes">DM-07</option>
-                        <option value="audi">DM-08</option>
-                        <option value="volvo">DM-09</option>
-                        <option value="saab">DM-10</option>
-                        <option value="mercedes">DM-11</option>
-                        <option value="audi">DM-12</option>
-                        <option value="volvo">DM-13</option>
-                        <option value="saab">DM-14</option>
-                        <option value="mercedes">DM-15</option>
-                        <option value="audi">DM-16</option>
-                        <option value="audi">DM-17</option>
-                        <option value="volvo">DM-18</option>
-                        <option value="saab">DM-19</option>
-                        <option value="mercedes">DM-20</option>
-                        <option value="audi">DM-21</option>
-                      </select>
-                        
-                      <button class="todoButton" type="submit"> <span class="gg-math-plus"></span></button>
-                </form>
-
-                <div class="menu-slider-container">
-                    <button class="aktiv menu-slider-icon">
-                        <img class="aktiv" src="img/dte/moActive.svg">
-                        <img class="normal" src="img/dte/mo.svg">
-                    </button>
-                    <button class="menu-slider-icon">
-                        <img class="aktiv" src="img/dte/diActive.svg">
-                        <img class="normal" src="img/dte/di.svg">
-                    </button>
-                    <button class="menu-slider-icon">
-                        <img class="aktiv" src="img/dte/miActive.svg">
-                        <img class="normal" src="img/dte/mi.svg">
-                    </button>
-                    <button class="menu-slider-icon">
-                        <img class="aktiv" src="img/dte/doActive.svg">
-                        <img class="normal" src="img/dte/do.svg">
-                    </button>
-                    <button class="menu-slider-icon">
-                        <img class="aktiv" src="img/dte/frActive.svg">
-                        <img class="normal" src="img/dte/fr.svg">
-                    </button>
-                    <button class="menu-slider-icon">
-                        <img class="aktiv" src="img/dte/saActive.svg">
-                        <img class="normal" src="img/dte/sa.svg">
-                    </button>
-                    <button class="menu-slider-icon" id="sonntag">
-                        <img class="aktiv" src="img/dte/soActive.svg">
-                        <img class="normal" src="img/dte/so.svg">
-                    </button>
-                    <div id="slider" class="menu-slider-bg"></div>
-                </div>
-            </div>
-
-         
-            <div class="reihe 1" style="display:none" onclick="window.location.href='https://rooms.hs-furtwangen.de/rooms/dm05';">
-                <b>Projektmanagement in Softwareprojekten</b><br>
-                16:15 - 17:45 Uhr <br><br>
-                DM-05
-            </div>
-
-            <div class="reihe 2" style="display:none" onclick="window.location.href='https://rooms.hs-furtwangen.de/rooms/dm15';">
-                <b>PRIMA</b><br>
-                14:15 - 15:45 Uhr <br><br>
-                DM-15
-            </div>
-
-            <div class="reihe 3" style="display:none" onclick="window.location.href='https://rooms.hs-furtwangen.de/rooms/dm04';">
-                <b>Online Marketing</b><br>
-                09:45 - 11:15 Uhr <br><br>
-                DM-04
-            </div>
-
-
-            <div class="reihe 3" style="display:none" onclick="window.location.href='https://rooms.hs-furtwangen.de/rooms/lc11';">
-                <b>Englisch</b><br>
-                14:15 - 16:45 Uhr <br><br>
-                LC-11
-            </div >
-
-            <div class="reihe 4" style="display:none" onclick="window.location.href='https://rooms.hs-furtwangen.de/rooms/dm15';">
-                <b>PRIMA</b><br>
-                14:15 - 15:45 Uhr <br><br>
-                DM-15
-            </div>
-
-            <div class="reihe 4" style="display:none" onclick="window.location.href='https://rooms.hs-furtwangen.de/rooms/dm21';">
-                <b>Online Produkt Management Meeting</b><br>
-                16:00 - 17:00 Uhr <br><br>
-                DM-21
-            </div>
-
-            <div class="reihe 5" style="display:none" onclick="window.location.href='https://rooms.hs-furtwangen.de/rooms/dm17';">
-                <b>Hypes, Hass, Hetze</b><br>
-                09:45 - 13:15 Uhr <br><br>
-                DM-17
-            </div>
-
-            <div class="reihe 5"  style="display:none" onclick="window.location.href='https://rooms.hs-furtwangen.de/rooms/dm15';">
-                <b>EIA</b><br>
-                14:15 - 17:45 Uhr <br><br>
-                DM-15
-            </div>
-
-           
-            <div class="reihe" style="display:none">
-                <img src="img/empty.png" alt="">
-            </div>
-            
-        </div>
-        
-        <div class="empty reihe">
-
+        <div
+          class="reihe 1"
+          style="display: none"
+          onclick="window.location.href='https://rooms.hs-furtwangen.de/rooms/dm03';"
+        >
+          <b>UX Research</b><br />
+          14:00 - 15:30 Uhr <br /><br />
+          DM-03
         </div>
 
-        <div class="logo">
-            <img src="img/hfu.png" alt="">
+        <div
+          class="reihe 1"
+          style="display: none"
+          onclick="window.location.href='https://rooms.hs-furtwangen.de/rooms/dm03';"
+        >
+          <b>Web Analytics</b><br />
+          15:45 - 17:15 Uhr <br /><br />
+          DM-03
         </div>
 
-        <div class="empty">
-
+        <div
+          class="reihe 2"
+          style="display: none"
+          onclick="window.location.href='https://rooms.hs-furtwangen.de/rooms/dm14';"
+        >
+          <b>Mobile Web Development</b><br />
+          09:45 - 11:15 Uhr <br /><br />
+          DM-14
         </div>
+
+        <div
+          class="reihe 2"
+          style="display: none"
+          onclick="window.location.href='https://rooms.hs-furtwangen.de/rooms/dm15';"
+        >
+          <b>PRIMA</b><br />
+          15:45 - 17:15 Uhr <br /><br />
+          DM-15
+        </div>
+
+        <div
+          class="reihe 3"
+          style="display: none"
+          onclick="window.location.href='https://rooms.hs-furtwangen.de/rooms/dm15';"
+        >
+          <b>Englisch</b><br />
+          14:15 - 15:45 Uhr <br /><br />
+          DM-15
+        </div>
+
+        <div
+          class="reihe 4"
+          style="display: none"
+          onclick="window.location.href='https://rooms.hs-furtwangen.de/rooms/dm14';"
+        >
+          <b>Mobile Web Development</b><br />
+          09:45 - 11:15 Uhr <br /><br />
+          DM-14
+        </div>
+
+        <div
+          class="reihe 4"
+          style="display: none"
+          onclick="window.location.href='https://rooms.hs-furtwangen.de/rooms/dm15';"
+        >
+          <b>PRIMA</b><br />
+          14:00 - 15:30 Uhr <br /><br />
+          DM-15
+        </div>
+
+        <div
+          class="reihe 5"
+          style="display: none"
+          onclick="window.location.href='https://felix.hs-furtwangen.de/auth/RepositoryEntry/3952705556/CourseNode/101518640475593';"
+        >
+          <b>Typografie</b><br />
+          09:45 - 13:00 Uhr <br /><br />
+          I0.15
+        </div>
+
+        <div
+          class="reihe 5"
+          style="display: none"
+          onclick="window.location.href='https://felix.hs-furtwangen.de/auth/RepositoryEntry/4072407414/CourseNode/103340169462132';"
+        >
+          <b>EIA</b><br />
+          14:00 - 17:15 Uhr <br /><br />
+          L2.08
+        </div>
+
+        <div class="reihe" style="display: none">
+          <img src="img/empty.png" alt="" />
+        </div>
+      </div>
+
+      <div class="empty reihe"></div>
+
+      <div class="logo">
+        <img src="img/hfu.png" alt="" />
+      </div>
+
+      <div class="empty"></div>
     </div>
 
     <script src="js/app.js"></script>
     <script src="js/time.js"></script>
     <script src="js/termin.js"></script>
-</body>
+  </body>
 </html>
