@@ -1,11 +1,15 @@
-input:focus, textarea:focus, select:focus, button:focus, button:active {
+input:focus,
+textarea:focus,
+select:focus,
+button:focus,
+button:active {
   outline: none;
 }
 
 body {
   background-color: #020f1b;
   color: white;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 h1 {
@@ -132,6 +136,46 @@ h4 {
   cursor: pointer;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+
+.container .reihe3 .wahl {
+  cursor: auto;
+  padding: 50px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: #031424;
+}
+
+.container .reihe3 .wahl select {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 10px;
+  font-family: Roboto;
+  font-size: 15px;
+  background-color: #020f1b;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  width: 65%;
+}
+
+.container .reihe3 .wahl button {
+  font-family: Roboto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: bold;
+  background-color: #ffcc12;
+  border: none;
+  width: 30%;
+  padding: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.container .reihe3 .wahl button:hover {
+  background: #deae00;
 }
 
 .container .reihe3 .reihe:hover {
@@ -298,7 +342,8 @@ form button:hover {
   font-size: 1rem;
 }
 
-.gg-trash, .gg-check {
+.gg-trash,
+.gg-check {
   pointer-events: none;
 }
 

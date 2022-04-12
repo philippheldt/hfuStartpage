@@ -1,377 +1,391 @@
+$lightBackground: white;
+$yellow: #ffcc12;
+$darkBackground: #020f1b;
+$dark: lighten($darkBackground, 2%);
+$darkHover: lighten($darkBackground, 1%);
+$darkerWhite: lighten($darkBackground, 10%);
+$hoverWhite: lighten($darkBackground, 20%);
 
-    $lightBackground: white;
-    $yellow: #ffcc12;
-    $darkBackground: #020f1b;
-    $dark: lighten($darkBackground, 2%);
-    $darkHover: lighten($darkBackground, 1%);
-    $darkerWhite: lighten($darkBackground, 10%);
-    $hoverWhite: lighten($darkBackground, 20%);
-
-
-
-input:focus, textarea:focus, select:focus, button:focus, button:active{
-    outline: none;
+input:focus,
+textarea:focus,
+select:focus,
+button:focus,
+button:active {
+  outline: none;
 }
 
-body{
-    background-color: $darkBackground;
-    color: $lightBackground;
-    font-family: 'Roboto', sans-serif;
+body {
+  background-color: $darkBackground;
+  color: $lightBackground;
+  font-family: "Roboto", sans-serif;
 }
 
-
-h1{
-    font-size: 40pt;
+h1 {
+  font-size: 40pt;
   font-weight: 300;
   padding: 0px;
   margin: 0px;
 }
 
 .time {
-    font-size: 40pt;
+  font-size: 40pt;
   font-weight: 300;
   padding: 0px;
   margin-right: -10px;
 }
 
-h3{
-    font-weight: 10;
-    padding: 0px;
+h3 {
+  font-weight: 10;
+  padding: 0px;
   margin: 0px;
 }
-h4{
-    padding: 0px;
+h4 {
+  padding: 0px;
   margin: 0px;
   font-weight: 300;
   color: $darkerWhite;
 }
 
-.container{
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 5% 10% 0% 10%;
+  grid-gap: 1em;
+
+  div {
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  .reihe {
+    background-color: $dark;
+  }
+
+  .profilbild {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin: 5% 10% 0% 10%;
+    grid-template-columns: 1fr 3fr;
+    background-color: $darkBackground;
+    img {
+      width: 70px;
+      align-self: center;
+    }
+
+    div {
+      align-self: center;
+      background-color: $darkBackground;
+    }
+  }
+
+  .profilbild:hover {
+    background-color: $darkHover;
+    cursor: pointer;
+    div {
+      background-color: $darkHover;
+    }
+  }
+
+  .blockTitel {
+    text-align: center;
+    font-weight: 500;
+  }
+
+  .platzhalter {
+    background-color: $darkBackground;
+  }
+
+  .datumUhrzeit {
+    text-align: right;
+    background-color: $darkBackground;
+  }
+
+  .reihe1 {
+    div {
+      display: grid;
+      grid-template-columns: 5fr 1fr 1fr;
+    }
+  }
+
+  .reihe2 {
+    display: grid;
+    grid-template-columns: 1fr;
     grid-gap: 1em;
+    padding: 0px;
+    margin: 0px;
+    background-color: $darkBackground;
+  }
 
-    div{
-        border-radius: 5px;
+  .reihe3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+    padding: 0px;
+    margin: 0px;
+    background-color: $darkBackground;
+
+    .reihe {
+      padding: 50px;
+      cursor: pointer;
+      transition: 0.5s;
+    }
+    .wahl {
+      cursor: auto;
+      padding: 50px;
+      transition: 0.5s;
+      background-color: $dark;
+
+      select {
+        box-sizing: border-box;
+        margin-top: 10px;
+        font-family: Roboto;
+        font-size: 15px;
+        background-color: $darkBackground;
+        color: #fff;
+        border: none;
         padding: 10px;
-    }
-
-    .reihe{
-        background-color: $dark;
-    }
-
-    .profilbild{
-        display: grid;
-        grid-template-columns: 1fr 3fr;
-        background-color: $darkBackground;
-        img{
-            width: 70px;
-            align-self: center;
-        }
-       
-        div{
-            align-self: center;
-            background-color: $darkBackground;
-        } 
-    }
-
-    .profilbild:hover{
-        background-color: $darkHover;
+        width: 65%;
+      }
+      button {
+        font-family: Roboto;
+        box-sizing: border-box;
+        font-weight: bold;
+        background-color: $yellow;
+        border: none;
+        width: 30%;
+        padding: 10px;
+        font-size: 15px;
         cursor: pointer;
-        div{
-            background-color: $darkHover;
-        }
+        transition: all 0.5s ease;
+      }
+      button:hover {
+        background: darken($yellow, 10%);
+      }
     }
 
-    .blockTitel{
-        text-align: center;
-        font-weight: 500;
+    .reihe:hover {
+      transform: scale(1.02);
     }
 
-    .platzhalter {
-        background-color: $darkBackground;
+    img {
+      width: 100%;
     }
 
-    .datumUhrzeit{
-        text-align: right;
-        background-color: $darkBackground;
+    input {
+      margin-bottom: 7px;
+      margin-right: 7px;
     }
 
-    .reihe1 {
-        div{
-            display: grid;
-            grid-template-columns: 5fr 1fr 1fr;
-        }
+    input::placeholder {
+      color: $darkerWhite;
     }
 
-    .reihe2{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-gap: 1em;
-        padding: 0px;
-        margin: 0px;
-        background-color: $darkBackground;
-    
+    .terminZeit {
+      width: 43%;
     }
+  }
 
-    .reihe3{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-gap: 1em;
-        padding: 0px;
-        margin: 0px;
-        background-color: $darkBackground;
-    
+  .empty {
+    background-color: $darkBackground;
+  }
 
-        .reihe{
-            padding: 50px;
-            cursor: pointer;
-            transition: 0.5s;
-        }
-
-        
-        .reihe:hover{
-           
-            transform: scale(1.02);
-        }
-       
-
-        img{
-            width: 100%;
-        }
-
-        input{
-            margin-bottom: 7px;
-            margin-right: 7px;
-            
-        }
-
-        input::placeholder{
-            color: $darkerWhite;
-            
-        }
-
-        .terminZeit{
-            width: 43%;
-        }
+  .logo {
+    background-color: $darkBackground;
+    img {
+      width: 100%;
+      margin-top: 50px;
     }
-
-    .empty{
-        background-color: $darkBackground;
-    }
-
-    .logo{
-        background-color: $darkBackground;
-        img{
-        
-            width: 100%;
-            margin-top: 50px;
-        }
-    }
+  }
 }
-
-
 
 form {
-    position: relative;
-    
+  position: relative;
 
-    input{
-        padding: 0.5rem;
-        font-size: 1rem;
-        border: none;
-        background: $darkBackground;
-        color: white;
-        width: calc(100% - 70px);
-    }
+  input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    background: $darkBackground;
+    color: white;
+    width: calc(100% - 70px);
+  }
 
-    button {
-        padding: 1.05rem;
-        font-size: 2rem;
-        border: none;
-        width: 50px;
-        background: $yellow;
-        position: absolute;
-        top: 0px;
-        cursor: pointer;
-        transition: 0.1s;
-    }
-
-    button:hover{
-        background: darken($yellow, 10%);
-    }
-}
-
-.iconAlign{
-    align-self: center;
-    justify-self: end;
+  button {
+    padding: 1.05rem;
+    font-size: 2rem;
+    border: none;
+    width: 50px;
+    background: $yellow;
+    position: absolute;
+    top: 0px;
     cursor: pointer;
-    color: $darkerWhite;
+    transition: 0.1s;
+  }
+
+  button:hover {
+    background: darken($yellow, 10%);
+  }
 }
 
-.iconAlign:hover{
-    color: $hoverWhite;
+.iconAlign {
+  align-self: center;
+  justify-self: end;
+  cursor: pointer;
+  color: $darkerWhite;
+}
+
+.iconAlign:hover {
+  color: $hoverWhite;
 }
 
 .icons {
-
- width: 10px;
-
-
+  width: 10px;
 }
 
-.off{
-    display: none;
+.off {
+  display: none;
 }
 
-.todoContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.todoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.todoList{
-    min-width: 100%;
-    list-style: none;
-    margin-left: -40px;
-    padding: 0px;;
+.todoList {
+  min-width: 100%;
+  list-style: none;
+  margin-left: -40px;
+  padding: 0px;
 }
 
-.todo{
-    width: 100%;
-    margin: 0.5rem;
-    background-color: $darkBackground;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: all 0.3s ease;
+.todo {
+  width: 100%;
+  margin: 0.5rem;
+  background-color: $darkBackground;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
 
-    li{
-        flex: 1;
-    }
+  li {
+    flex: 1;
+  }
 }
 
-.completedButton{
-    background: $yellow;
-    border: none;
-    padding: 0.2rem;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: 0.2s;
+.completedButton {
+  background: $yellow;
+  border: none;
+  padding: 0.2rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.2s;
 }
 
-.completedButton:hover{
-    background: darken($yellow, 20%);
+.completedButton:hover {
+  background: darken($yellow, 20%);
 }
 
-.deleteButton{
-    background: $darkBackground;
-    color: $darkerWhite;
-    border: none;
-    padding-right: 1rem;
-    cursor: pointer;
-    font-size: 1rem;
+.deleteButton {
+  background: $darkBackground;
+  color: $darkerWhite;
+  border: none;
+  padding-right: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
 }
 
-.gg-trash, .gg-check{
-    pointer-events: none;
+.gg-trash,
+.gg-check {
+  pointer-events: none;
 }
 
-.completed{
-    text-decoration: line-through;
-    color: $darkerWhite;
-    opacity: 0.5;
+.completed {
+  text-decoration: line-through;
+  color: $darkerWhite;
+  opacity: 0.5;
 }
 
 .fall {
-    transform: translateY(4rem) rotateZ(10deg);
-    opacity: 0;
+  transform: translateY(4rem) rotateZ(10deg);
+  opacity: 0;
 }
 
-.menu-slider-container{
-    display: flex;
-    flex-direction: row;
-    width: 18rem;
-    background-color: $darkBackground;
-    border-radius: 6rem;
-    position: relative;
+.menu-slider-container {
+  display: flex;
+  flex-direction: row;
+  width: 18rem;
+  background-color: $darkBackground;
+  border-radius: 6rem;
+  position: relative;
 }
 
+.menu-slider-icon {
+  border: none;
+  background: transparent;
+  position: relative;
+  z-index: 5;
 
-    .menu-slider-icon{
-    border: none;
-    background: transparent;
-    position: relative;
-    z-index: 5;
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  transition: all 250ms;
+  margin: 0 1rem 0 0;
 
+  &:last-child {
+    margin: 0 0 0 0;
+  }
+
+  &.aktiv {
+    img {
+      &.aktiv {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+      }
+      &.normal {
+        opacity: 0;
+      }
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 1.5rem;
     height: 1.5rem;
-    cursor: pointer;
     transition: all 250ms;
-    margin: 0 1rem 0 0;
 
-        &:last-child{
-            margin: 0 0 0 0;
-        }
-
-        &.aktiv{
-            img{
-                &.aktiv{
-                    opacity: 1;
-                    transform: translate(-50%, -50%);
-                }
-                &.normal{
-                    opacity: 0;
-                }
-            }
-        }
-    
-
-        &:focus{
-            outline: none;
-        }
-    
-        img{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 1.5rem;
-            height: 1.5rem;
-            transition: all 250ms;
-
-            &.aktiv{
-                opacity: 0;
-            }
-
-            &.normal{
-                opacity: 1;
-            }
-    
+    &.aktiv {
+      opacity: 0;
     }
 
+    &.normal {
+      opacity: 1;
+    }
+  }
 }
-.menu-slider-bg{
-    position: absolute;
-    top: 0.5rem;
-    left: 0.5rem;
-    z-index: 2;
-    width: 0.5rem;
-    height: 0.5rem;
-    border-radius: 5rem;
-    background-color: $yellow;
-    transition: all 250ms;
+.menu-slider-bg {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 2;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 5rem;
+  background-color: $yellow;
+  transition: all 250ms;
 }
 
 @media screen and (max-width: 1000px) {
-    .container{
-        display: block;
-        margin: 1% 5% 0% 5%;
-        .reihe{
-            margin: 10px;
-        }
+  .container {
+    display: block;
+    margin: 1% 5% 0% 5%;
+    .reihe {
+      margin: 10px;
     }
+  }
 }
-
-
