@@ -143,7 +143,16 @@ h4 {
         border: none;
         padding: 10px;
         width: 65%;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        -ms-appearance: none;
+        &::before {
+          content: ">";
+          width: 100px;
+        }
       }
+
       button {
         font-family: Roboto;
         box-sizing: border-box;

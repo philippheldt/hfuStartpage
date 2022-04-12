@@ -2,7 +2,8 @@ const enterRoom = document.querySelector("#enterRoom");
 const selectRoom = document.querySelector("#selectRoom");
 enterRoom.addEventListener("click", function () {
   console.log("https://rooms.hs-furtwangen.de/rooms/dm" + selectRoom.value);
-  window.location.href = "https://rooms.hs-furtwangen.de/rooms/dm" + selectRoom.value;
+  // window.location.href = "https://rooms.hs-furtwangen.de/rooms/dm" + selectRoom.value;
+  location.assign("https://rooms.hs-furtwangen.de/rooms/dm" + selectRoom.value);
 });
 
 //Selectors

@@ -157,6 +157,15 @@ h4 {
   border: none;
   padding: 10px;
   width: 65%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -ms-appearance: none;
+}
+
+.container .reihe3 .wahl select::before {
+  content: ">";
+  width: 100px;
 }
 
 .container .reihe3 .wahl button {
